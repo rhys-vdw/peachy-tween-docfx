@@ -1,14 +1,19 @@
 :root {
     --theme-dark: #00303B;
-    --theme-cream: #FFCE96;
+    --theme-yellow: #FFCE96;
     --theme-red: #FF7777;
+    --theme-light: #F1F2DA;
 
-    --heading-color: #000;
-    --link-color: #d54473;
-    --nav-bar-bg-color: #262f39;
-    --nav-text-color: #262f39;
-    --nav-link-active: #00cccc;
-    --nav-link-active-underline-color: red;
+    --heading-color: var(--theme-dark);
+    --link-color: var(--theme-red);
+    --link-active: var(--theme-dark);
+    --nav-bar-bg-color: var(--theme-dark);
+    --nav-text-color: var(--theme-dark);
+    --nav-link: var(--theme-light);
+    --nav-link-active: var(--theme-red);
+    --nav-link-active-underline-color: var(--theme-red);
+    --side-toc-accent: var(--theme-yellow);
+    --side-toc-button: var(--theme-red);
 }
 
 body {
@@ -95,7 +100,7 @@ ul.level1.breadcrumb>li>a {
 }
 
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-text {
-    color: #fff;
+    color: var(--nav-link);
     background-color: var(--nav-bar-bg-color);
     border-bottom: 3px solid transparent;
     padding-bottom: 12px;
@@ -143,7 +148,7 @@ ul.level1.breadcrumb>li>a {
 
 /*selected element in sidebar at level 2*/
 ul.nav.level2>li.active.in>a.active {
-    background: #222c37;
+    background: var(--theme-dark);
     color: #fff;
     padding: 5px 8px;
     text-decoration: none;
@@ -154,9 +159,9 @@ ul.nav.level2>li.active.in>a.active {
     width: 12px;
     height: 12px;
     cursor: pointer;
-    border: #19e3b1 1px solid;
+    border: var(--side-toc-button) 1px solid;
     font-size: 8px;
-    background: #19e3b1;
+    background: var(--side-toc-button);
     color: #fff;
     content: "-";
     display: table;
@@ -168,9 +173,9 @@ ul.nav.level2>li.active.in>a.active {
     width: 12px;
     height: 12px;
     cursor: pointer;
-    border: #19e3b1 1px solid;
+    border: var(--side-toc-button) 1px solid;
     font-size: 8px;
-    background: #19e3b1;
+    background: var(--side-toc-button);
     color: #fff;
     content: "+";
     display: table;
@@ -211,9 +216,9 @@ ul.nav.level2>li.active.in>a.active {
 }
 
 .sidetoc {
-    background-color: #ccf5f5;
+    background-color: var(--side-toc-accent);
     border: none;
-    color: #ccf5f5;
+    color: var(--side-toc-accent);
     padding-right: 8px;
     height: 100%;
 }
@@ -277,18 +282,18 @@ ul.nav.level2>li.active.in>a.active {
 }
 
 .toc .nav>li.active>a {
-    color: #000;
+    color: var(--link-active);
     text-decoration: none;
     font-weight: bold;
 }
 
 .toc .nav>li.active>a:hover {
-    color: #000;
+    color: var(--link-active);
     text-decoration: underline;
 }
 
 .toc .nav>li.active>a:focus {
-    color: #000;
+    color: var(--link-active);
     text-decoration: underline;
 }
 
