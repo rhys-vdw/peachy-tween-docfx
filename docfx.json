@@ -52,7 +52,7 @@
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "templates/peachy", "templates/discordfx"
+      "templates/peachy", "templates/unity"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
