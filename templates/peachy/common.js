@@ -36,6 +36,9 @@ function getViewSourceHref(item, gitContribute, gitUrlPattern) {
 }
 
 function getImproveTheDocHref(item, gitContribute, gitUrlPattern) {
+    // !! Disable "improve this doc"
+    return '';
+
     if (!item) return '';
     if (!item.documentation || !item.documentation.remote) {
         return getNewFileUrl(item, gitContribute, gitUrlPattern);
