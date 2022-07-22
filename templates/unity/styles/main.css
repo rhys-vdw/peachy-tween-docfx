@@ -4,6 +4,8 @@
     --theme-red: #FF7777;
     --theme-light: #F1F2DA;
 
+    --table-alternating-color: #F6F7E8;
+    --body-text-color: var(--theme-dark);
     --heading-color: var(--theme-dark);
     --link-color: var(--theme-red);
     --link-active: var(--theme-dark);
@@ -14,10 +16,11 @@
     --nav-link-active-underline-color: var(--theme-red);
     --side-toc-accent: var(--theme-yellow);
     --side-toc-button: var(--theme-red);
+    --expand-stub-size: 14px;
 }
 
 body {
-    color: #465563;
+    color: var(--body-text-color);
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     font-size: 16px;
@@ -156,31 +159,35 @@ ul.nav.level2>li.active.in>a.active {
 }
 
 .toc .nav>li.active>.expand-stub::before, .toc .nav>li.in>.expand-stub::before, .toc .nav>li.in.active>.expand-stub::before, .toc .nav>li.filtered>.expand-stub::before {
-    width: 12px;
-    height: 12px;
+    width: var(--expand-stub-size);
+    height: var(--expand-stub-size);
     cursor: pointer;
     border: var(--side-toc-button) 1px solid;
-    font-size: 8px;
+    font-size: var(--expand-stub-size);
     background: var(--side-toc-button);
     color: #fff;
     content: "-";
     display: table;
     margin-top: 3px;
     text-align: center;
+    line-height: var(--expand-stub-size);
+    font-family: monospace;
 }
 
 .toc .nav>li>.expand-stub::before, .toc .nav>li.active>.expand-stub::before {
-    width: 12px;
-    height: 12px;
+    width: var(--expand-stub-size);
+    height: var(--expand-stub-size);
     cursor: pointer;
     border: var(--side-toc-button) 1px solid;
-    font-size: 8px;
+    font-size: var(--expand-stub-size);
     background: var(--side-toc-button);
     color: #fff;
     content: "+";
     display: table;
     margin-top: 3px;
     text-align: center;
+    line-height: var(--expand-stub-size);
+    font-family: monospace;
 }
 
 .sidefilter {
@@ -342,4 +349,16 @@ pre {
     .container {
         width: 100%;
     }
+}
+
+.table-striped>tbody>tr:nth-of-type(even) {
+    background-color: var(--table-alternating-color);
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background: none;
+}
+
+.affix ul > li > a {
+    color: var(--body-text-color);
 }
