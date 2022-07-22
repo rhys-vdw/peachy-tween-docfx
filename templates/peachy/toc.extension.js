@@ -4,6 +4,7 @@
  * This method will be called at the start of exports.transform in toc.html.js
  */
 exports.preTransform = function (model) {
+  model._disableSideFilter = true;
   return model;
 }
 
