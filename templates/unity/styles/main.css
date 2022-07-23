@@ -76,6 +76,10 @@ article h4 {
     border-bottom: 2px solid #ddd;
 }
 
+.article {
+    padding-left: 30px;
+}
+
 /* NAVBAR */
 
 .navbar-brand>img {
