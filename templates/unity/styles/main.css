@@ -1,10 +1,11 @@
 :root {
-    --theme-dark: #00303B;
-    --theme-yellow: #FFCE96;
-    --theme-red: #FF7777;
+    --theme-dark: #18262F;
+    --theme-yellow: #E4B51C;
+    --theme-red: #EF5253;
     --theme-light: #F1F2DA;
+    --theme-faint-purple: #f7f7fd;
 
-    --table-alternating-color: #f7f7fd;
+    --table-alternating-color: var(--theme-faint-purple);
     --body-text-color: var(--theme-dark);
     --heading-color: var(--theme-dark);
     --link-color: var(--theme-red);
@@ -14,7 +15,7 @@
     --nav-link: var(--theme-red);
     --nav-link-active: var(--theme-yellow);
     --nav-link-active-underline-color: var(--nav-link-active);
-    --side-toc-accent: var(--theme-yellow);
+    --side-toc-accent: var(--theme-faint-purple);
     --side-toc-button: var(--theme-red);
     --side-toc-button-active: var(--theme-yellow);
     --expand-stub-size: 14px;
@@ -79,6 +80,11 @@ article h4 {
 
 .navbar-brand>img {
     color: #fff;
+}
+
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    color: var(--nav-link-active);
+    background-color: default;
 }
 
 .navbar {
